@@ -1,0 +1,279 @@
+<dataSource name="MySQL - uiuStudentRecordSystem@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="uiustudentrecordsystem">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="information_schema" />
+    <schema id="3" name="mysql" />
+    <schema id="4" name="performance_schema" />
+    <schema id="5" name="sakila" />
+    <schema id="6" name="sys" />
+    <schema id="7" name="world" />
+    <table id="8" parent="1" name="admin" />
+    <table id="9" parent="1" name="student" />
+    <table id="10" parent="1" name="teacher" />
+    <table id="11" parent="1" name="course" />
+    <table id="12" parent="1" name="studentgpa" />
+    <column id="13" parent="8" name="dbAdminSerialNo">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="14" parent="8" name="dbAdminFname">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="15" parent="8" name="dbAdminLname">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="16" parent="8" name="dbAdminEmail">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="17" parent="8" name="dbAdminPassword">
+      <data-type>varchar(64)|0</data-type>
+      <default-expression>'password'</default-expression>
+    </column>
+    <key id="18" parent="8" name="PRIMARY">
+      <columns>dbAdminSerialNo</columns>
+      <primary>1</primary>
+    </key>
+    <column id="19" parent="9" name="dbStudentSerialNo">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="20" parent="9" name="dbStudentFname">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="21" parent="9" name="dbStudentLname">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="22" parent="9" name="dbStudentID">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="23" parent="9" name="dbStudentPassword">
+      <data-type>varchar(64)|0</data-type>
+      <default-expression>'password'</default-expression>
+    </column>
+    <column id="24" parent="9" name="dbStudentDepartment">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="25" parent="9" name="dbStudentEmail">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="26" parent="9" name="dbStudentPhone">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="27" parent="9" name="dbStudentAddress">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="28" parent="9" name="dbStudentDOB">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="29" parent="9" name="dbGuardianFname">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="30" parent="9" name="dbGuardianLname">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="31" parent="9" name="dbGuardianEmail">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="32" parent="9" name="dbGuardianPhone">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="33" parent="9" name="dbGuardianPassword">
+      <data-type>varchar(64)|0</data-type>
+      <default-expression>'password'</default-expression>
+    </column>
+    <column id="34" parent="9" name="dbStudent1stSemGpa">
+      <mandatory>1</mandatory>
+      <data-type>decimal(10,2)|0</data-type>
+      <default-expression>'0.00'</default-expression>
+    </column>
+    <column id="35" parent="9" name="dbStudent2ndSemGpa">
+      <mandatory>1</mandatory>
+      <data-type>decimal(10,2)|0</data-type>
+      <default-expression>'0.00'</default-expression>
+    </column>
+    <column id="36" parent="9" name="dbStudent3rdSemGpa">
+      <mandatory>1</mandatory>
+      <data-type>decimal(10,2)|0</data-type>
+      <default-expression>'0.00'</default-expression>
+    </column>
+    <column id="37" parent="9" name="dbStudent4thSemGpa">
+      <mandatory>1</mandatory>
+      <data-type>decimal(10,2)|0</data-type>
+      <default-expression>'0.00'</default-expression>
+    </column>
+    <column id="38" parent="9" name="dbStudent5thSemGpa">
+      <mandatory>1</mandatory>
+      <data-type>decimal(10,2)|0</data-type>
+      <default-expression>'0.00'</default-expression>
+    </column>
+    <column id="39" parent="9" name="dbStudent6thSemGpa">
+      <mandatory>1</mandatory>
+      <data-type>decimal(10,2)|0</data-type>
+      <default-expression>'0.00'</default-expression>
+    </column>
+    <column id="40" parent="9" name="dbStudent7thSemGpa">
+      <mandatory>1</mandatory>
+      <data-type>decimal(10,2)|0</data-type>
+      <default-expression>'0.00'</default-expression>
+    </column>
+    <column id="41" parent="9" name="dbStudent8thSemGpa">
+      <mandatory>1</mandatory>
+      <data-type>decimal(10,2)|0</data-type>
+      <default-expression>'0.00'</default-expression>
+    </column>
+    <column id="42" parent="9" name="dbStudent9thSemGpa">
+      <mandatory>1</mandatory>
+      <data-type>decimal(10,2)|0</data-type>
+      <default-expression>'0.00'</default-expression>
+    </column>
+    <column id="43" parent="9" name="dbStudent10thSemGpa">
+      <mandatory>1</mandatory>
+      <data-type>decimal(10,2)|0</data-type>
+      <default-expression>'0.00'</default-expression>
+    </column>
+    <column id="44" parent="9" name="dbStudent11thSemGpa">
+      <mandatory>1</mandatory>
+      <data-type>decimal(10,2)|0</data-type>
+      <default-expression>'0.00'</default-expression>
+    </column>
+    <column id="45" parent="9" name="dbStudent12thSemGpa">
+      <mandatory>1</mandatory>
+      <data-type>decimal(10,2)|0</data-type>
+      <default-expression>'0.00'</default-expression>
+    </column>
+    <column id="46" parent="9" name="dbStudentCgpa">
+      <mandatory>1</mandatory>
+      <data-type>decimal(10,2)|0</data-type>
+      <default-expression>'0.00'</default-expression>
+    </column>
+    <key id="47" parent="9" name="PRIMARY">
+      <columns>dbStudentSerialNo</columns>
+      <primary>1</primary>
+    </key>
+    <column id="48" parent="10" name="dbTeacherSerialNo">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="49" parent="10" name="dbTeacherFname">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="50" parent="10" name="dbTeacherLname">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="51" parent="10" name="dbTeacherEmail">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="52" parent="10" name="dbTeacherPassword">
+      <data-type>varchar(64)|0</data-type>
+      <default-expression>'password'</default-expression>
+    </column>
+    <column id="53" parent="10" name="dbTeacherDepartment">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="54" parent="10" name="dbTeacherID">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="55" parent="10" name="dbTeacherCourse">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <key id="56" parent="10" name="PRIMARY">
+      <columns>dbTeacherSerialNo</columns>
+      <primary>1</primary>
+    </key>
+    <column id="57" parent="11" name="dbCourseSerial">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="58" parent="11" name="dbCourseSec">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="59" parent="11" name="dbCourseCredit">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="60" parent="11" name="dbCourseCode">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="61" parent="11" name="dbCourseTitle">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <key id="62" parent="11" name="PRIMARY">
+      <columns>dbCourseSerial</columns>
+      <primary>1</primary>
+    </key>
+    <column id="63" parent="12" name="dbstudentgpaSerial">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="64" parent="12" name="dbstudentgpaID">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="65" parent="12" name="dbstudentgpaCurrentCourse">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="66" parent="12" name="dbstudentgpaCurrentCourseGPA">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="67" parent="12" name="dbstudentgpa1stSem">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="68" parent="12" name="dbstudentgpa2ndSem">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="69" parent="12" name="dbstudentgpa3rdSem">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="70" parent="12" name="dbstudentgpa4thSem">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="71" parent="12" name="dbstudentgpa5thSem">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="72" parent="12" name="dbstudentgpa6thSem">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="73" parent="12" name="dbstudentgpa7thSem">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="74" parent="12" name="dbstudentgpa8thSem">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="75" parent="12" name="dbstudentgpa9thSem">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="76" parent="12" name="dbstudentgpa10thSem">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="77" parent="12" name="dbstudentgpa11thSem">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="78" parent="12" name="dbstudentgpa12thSem">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="79" parent="12" name="dbstudentgpa13thSem">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="80" parent="12" name="dbstudentgpa14thSem">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="81" parent="12" name="dbstudentgpa15thSem">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="82" parent="12" name="dbstudentgpa16thSem">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <column id="83" parent="12" name="dbstudentCGPA">
+      <data-type>varchar(64)|0</data-type>
+    </column>
+    <key id="84" parent="12" name="PRIMARY">
+      <columns>dbstudentgpaSerial</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>

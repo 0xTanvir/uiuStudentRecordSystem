@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="uiuStudentRecordSystem:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/uiuStudentRecordSystem_jar</output-path>
+    <root id="archive" name="uiuStudentRecordSystem.jar">
+      <element id="module-output" name="uiuStudentRecordSystem" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/externalLibrary/TrayNotification.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/externalLibrary/mysql-connector-java-5.1.39-bin.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

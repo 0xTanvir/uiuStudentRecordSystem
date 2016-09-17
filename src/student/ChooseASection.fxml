@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="235.0" prefWidth="332.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="student.ChooseASectionController">
+   <children>
+      <ComboBox fx:id="chooseASection" layoutX="80.0" layoutY="85.0" prefWidth="150.0" promptText="Choose a Section" />
+      <Button layoutX="109.0" layoutY="142.0" mnemonicParsing="false" onAction="#setTakeButtonClick" prefHeight="25.0" prefWidth="92.0" style="-fx-background-color: #2196F3;" text="Take" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1180.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.AdminTeacherController">
+   <children>
+      <BorderPane layoutX="464.0" layoutY="248.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="29.0" prefWidth="1180.0" BorderPane.alignment="CENTER">
+               <children>
+                  <MenuBar prefHeight="25.0" prefWidth="1180.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#setCourseCloseButtonClick" text="Close" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#setCourseAboutButtonClick" text="About" />
+                           </items>
+                        </Menu>
+                     </menus>
+                  </MenuBar>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <SplitPane dividerPositions="0.29797979797979796" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#setAdminTeacherAddNewButtonClick" prefHeight="30.0" prefWidth="80.0" style="-fx-background-color: #0B9CE3; -fx-text-fill: white;" text="AddNew" AnchorPane.leftAnchor="14.0" />
+                        <Button layoutX="134.0" layoutY="14.0" mnemonicParsing="false" onAction="#setAdminTeacherEditButtonClick" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #09B28C;" text="Edit" textFill="WHITE" />
+                        <Button alignment="CENTER" layoutX="254.0" layoutY="14.0" mnemonicParsing="false" onAction="#setAdminTeacherDeleteButtonClick" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #FF3F3C; -fx-text-fill: white;" text="Delete" />
+                        <Text layoutX="16.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teacher Details:" AnchorPane.bottomAnchor="504.482421875" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="214.33203125" AnchorPane.topAnchor="59.576171875">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Text>
+                        <Separator layoutX="13.0" layoutY="99.0" prefHeight="4.0" prefWidth="322.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="99.0" />
+                        <GridPane layoutX="28.0" layoutY="159.0" prefHeight="230.0" prefWidth="314.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="159.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.0" minWidth="10.0" prefWidth="95.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="201.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="First Name">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="adminTeacherTFFname" disable="true" GridPane.columnIndex="1" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="adminTeacherTFLname" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="adminTeacherTFID" disable="true" prefWidth="214.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="adminTeacherTFEmail" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Department" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="adminTeacherTFDepartment" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Running Sec." GridPane.rowIndex="5">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="adminTeacherTFSec" disable="true" promptText="Course Code:Section e.g. CSE211:SA" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                           </children>
+                        </GridPane>
+                        <Text layoutX="16.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Teacher Information" AnchorPane.bottomAnchor="444.7333984375" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="197.095703125" AnchorPane.topAnchor="120.6552734375">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="adminTeacherClearButtonClick" disable="true" layoutX="134.0" layoutY="439.0" mnemonicParsing="false" onAction="#setAdminTeacherClearButtonClick" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #FF5151; -fx-text-fill: white;" text="Clear" AnchorPane.rightAnchor="140.0" />
+                        <Button fx:id="adminTeacherSaveButtonClick" disable="true" layoutX="239.0" layoutY="439.0" mnemonicParsing="false" onAction="#setAdminTeacherSaveButtonClick" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #408E2F; -fx-text-fill: white;" text="Save" AnchorPane.rightAnchor="29.0" />
+                        <Separator layoutX="9.0" layoutY="412.0" prefHeight="2.0" prefWidth="330.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="9.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <TextField fx:id="adminTeacherTFSearch" layoutX="548.0" layoutY="14.0" promptText="Teacher ID" AnchorPane.rightAnchor="127.0" />
+                        <Button layoutX="721.0" layoutY="14.0" mnemonicParsing="false" onAction="#setAdminTeacherSearchButtonClick" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #09B28C;" text="Search" textFill="WHITE" AnchorPane.rightAnchor="23.0" />
+                        <Button layoutX="46.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #09B28C;" text="View" textFill="WHITE" AnchorPane.leftAnchor="46.0" />
+                        <Button layoutX="146.0" layoutY="14.0" mnemonicParsing="false" onAction="#setAdminTeacherRefreshButtonClick" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #09B28C;" text="Refresh" textFill="WHITE" AnchorPane.leftAnchor="146.0" />
+                        <TableView fx:id="adminTeacherTableView" layoutX="2.0" layoutY="55.0" prefHeight="533.0" prefWidth="822.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+                           <columns>
+                              <TableColumn fx:id="adminTeacherColumnNo" prefWidth="32.0" text="No." />
+                              <TableColumn fx:id="adminTeacherColumnName" prefWidth="107.0" text="Name" />
+                              <TableColumn fx:id="adminTeacherColumnID" prefWidth="99.0" text="ID" />
+                              <TableColumn fx:id="adminTeacherColumnEmail" prefWidth="171.0" text="Email" />
+                              <TableColumn fx:id="adminTeacherColumnDepartment" prefWidth="76.0" text="Department" />
+                              <TableColumn fx:id="adminTeacherColumnRunningCourse" prefWidth="329.0" text="Running Course" />
+                           </columns>
+                        </TableView>
+                     </children></AnchorPane>
+               </items>
+            </SplitPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

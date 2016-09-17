@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1180.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teacher.TeacherController">
+    <children>
+        <BorderPane layoutX="464.0" layoutY="248.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <AnchorPane prefHeight="29.0" prefWidth="1180.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <MenuBar prefHeight="25.0" prefWidth="1180.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <menus>
+                                <Menu mnemonicParsing="false" text="File">
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#setCourseCloseButtonClick" text="Close" />
+                                    </items>
+                                </Menu>
+                                <Menu mnemonicParsing="false" text="Help">
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#setCourseAboutButtonClick" text="About" />
+                                    </items>
+                                </Menu>
+                            </menus>
+                        </MenuBar>
+                    </children>
+                </AnchorPane>
+            </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="teacherTableView" layoutX="974.0" layoutY="65.0" prefHeight="525.0" prefWidth="712.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="468.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
+                    <columns>
+                      <TableColumn fx:id="teacherColumnID" prefWidth="138.0" text="Student ID" />
+                      <TableColumn fx:id="teacherColumnName" prefWidth="163.0" text="Student Name" />
+                        <TableColumn fx:id="teacherColumnGPA" prefWidth="106.0" text="This Course GPA" />
+                        <TableColumn fx:id="teacherColumnPhone" prefWidth="132.0" text="Phone" />
+                        <TableColumn fx:id="teacherEmail" prefWidth="172.0" text="Email" />
+                    </columns>
+                  </TableView>
+                  <ComboBox fx:id="teacherTableSecChoose" layoutX="468.0" layoutY="14.0" prefWidth="150.0" promptText="Choose a Section" />
+                  <Button fx:id="teacherLoadButton" layoutX="633.0" layoutY="14.0" mnemonicParsing="false" onAction="#setTeacherLoadClick" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #f57c00;" text="Load" textFill="WHITE" />
+                  <Text fill="#673ab7" layoutX="21.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GPA Calculation :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <GridPane layoutX="75.0" layoutY="166.0" prefHeight="259.0" prefWidth="300.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Text fill="#673ab7" strokeType="OUTSIDE" strokeWidth="0.0" text="Attendance">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="teacherTFAttendance" disable="true" GridPane.columnIndex="1" />
+                        <Text fill="#673ab7" strokeType="OUTSIDE" strokeWidth="0.0" text="Assignment" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="teacherTFAssignment" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Text fill="#673ab7" strokeType="OUTSIDE" strokeWidth="0.0" text="Presentation" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="teacherTFPresentation" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Text fill="#673ab7" strokeType="OUTSIDE" strokeWidth="0.0" text="Class Test" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="teacherTFClassTest" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Text fill="#673ab7" strokeType="OUTSIDE" strokeWidth="0.0" text="Midterm" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="teacherTFMidterm" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Text fill="#673ab7" strokeType="OUTSIDE" strokeWidth="0.0" text="Final" GridPane.rowIndex="5">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="teacherTFFinal" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                     </children>
+                  </GridPane>
+                  <Text fx:id="name" fill="#0091ea" layoutX="75.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="id" fill="#f57c00" layoutX="156.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(ID)">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="teacherAddGPAButton" disable="true" layoutX="327.0" layoutY="463.0" mnemonicParsing="false" onAction="#setTeacherAddGPAClick" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #f57c00;" text="Add GPA" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="teacherCancelButton" disable="true" layoutX="198.0" layoutY="463.0" mnemonicParsing="false" onAction="#setTeacherCancelClick" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #f57c00;" text="Cancel" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Separator layoutX="21.0" layoutY="444.0" prefHeight="5.0" prefWidth="429.0" />
+                  <Button layoutX="279.0" layoutY="14.0" mnemonicParsing="false" onAction="#setTeacherSelectClick" prefHeight="25.0" prefWidth="91.0" style="-fx-background-color: #f57c00;" text="Select" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+         </center>
+        </BorderPane>
+    </children>
+</AnchorPane>
